@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.divider-box {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.divider-box:first-of-type {
+    justify-content: start;
+}
+
+.divider {
+    display: flex;
+    width: 5rem;
+    border-top: 2rem solid rgba(0,0,0,.1);
+}
+
+/* Tribute Nav */
+
+.tribute_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    background: #131313;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.tribute-nav_head {
+    width: fit-content;
+}
+
+.signature {
+    max-width: 10rem;
+    display: block;
+}
+
+.tribute_menu {
+    gap: 2rem;
+    list-style: none;
+}
+
+.tribute_menu__item__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.5s ease-out;
+}
+
+.tribute_menu__item__link:hover {
+    color: rgb(209, 209, 209);
+}
+
+.tribute_menu_date {
+    color: white;
+}
+
+/* Section - Tribute */
+
+.chester-tribute {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.chester-bg {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/chester.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(20%);
+    color: white;
+    position: absolute;
+    z-index: -1;
+}
+
+.chester-tribute_titles {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    backdrop-filter:  blur(4px);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,0.3);
+    gap: .5rem;
+}
+
+
+
+.chester-tribute_titles h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Section - Who Is Chester */
+
+.chester-whois-image-box {
+    display: flex;
+    width: 100%;
+    box-shadow: 0rem 12px 2rem rgba(0,0,0,0.12);
+    border-radius: 16px;
+}
+
+.who-is-chester {
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.chester-whois-image {
+    display: block;
+    filter: grayscale(70%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+
+.chester-whois-title span {
+    display: inline-block;
+    background-color: #131313;
+    padding: .5rem;
+    border-radius: .3rem;
+    color: white;
+    
+}
+
+.chester-whois-paragraph {
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+/* Section - Chester and Linkin Park */
+
+.chester-linkin {
+    display: flex;
+    flex-direction: column;
+}
+
+.chester-linkin_right-box {
+    gap: 3rem;
+    padding: 3rem;
+    align-items: center;
+}
+
+.chester-linkin_right-title {
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.chester-linkin_right-title span {
+    display: inline-block;
+    background-color: #131313;
+    padding: .5rem;
+    border-radius: .3rem;
+    color: white;
+}
+
+.chester-linkin_right-image-box {
+    height: 50%;
+}
+
+.chester-linkin_right-image-box {
+    display: flex;
+    width: 100%;
+    box-shadow: 0rem 12px 2rem rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+.chester-linkin_right-image {
+    display: block;
+    filter: grayscale(70%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/*  */
+
+.chester-linkin_left-box {
+    gap: 3rem;
+    padding: 3rem;
+    align-items: center;
+}
+
+.chester-linkin_left-title {
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.chester-linkin_left-title span {
+    display: inline-block;
+    background-color: #131313;
+    padding: .5rem;
+    border-radius: .3rem;
+    color: white;
+}
+
+.chester-linkin_left-image-box {
+    display: flex;
+    width: 100%;
+    box-shadow: 0rem 12px 2rem rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+.chester-linkin_left-image {
+    display: block;
+    filter: grayscale(70%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .chester-linkin_left-box,
+    .chester-linkin_right-box,
+    .who-is-chester {
+        display: block;
+    }
+
+    .tribute_menu {
+        display: none;
+    }
+
+    .chester-tribute_titles h1 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .chester-tribute_titles h2 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .chester-linkin_left-text, .chester-linkin_right-text, .chester-linkin_left-text, .chester-whois-paragraph {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .chester-whois-title, .chester-linkin_right-title, .chester-linkin_right-title {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .tribute_menu {
+        display: flex;
+    }
+
+    .chester-tribute_titles h1 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    .chester-tribute_titles h1 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .chester-linkin_left-text, .chester-linkin_right-text, .chester-linkin_left-text, .chester-whois-paragraph {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .chester-whois-title, .chester-linkin_right-title, .chester-linkin_right-title {
+        font-size: 2.2rem;
+        text-align: left;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1400px) {
+    .chester-linkin_left-box,
+    .chester-linkin_right-box,
+    .who-is-chester {
+        display: flex;
+    }
+}
